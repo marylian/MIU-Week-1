@@ -1,7 +1,8 @@
+// write your javascript in here
 //Marylia Nieves
-//Visual Frameworks (VFW) 
-//Assignment 4
-// 8/23/12 
+//MiU 
+//Assignment 1
+// 10/25/12 
 //var chameleon = "blue";
 //alert (chameleon);
 

@@ -1,47 +1,118 @@
-<!DOCTYPE html>
-<!-- VFW Assignment
-<!- -Marylia Nieves VFW 8/16/12 Week 3-->
-<!--HTML Tag-->
-<html>
-	<!--Document Head-->
-	<head>
-		<!--Meta content gives our browser some information about our document.-->
-		<meta charset="utf-8"/>
-		<meta name="description" content= "Our very first HTML Document!"/>
-		<meta name="keywords" content="html5, mobile development, Full Sail University"/>
-		<!--Allows search engine robots to index our page in a search engine and follow links on our page.-->
-		<meta name="robots" content="index, follow"/>
+<!doctype html>  
+<!--Marylia Nieves
+	MIU 1211
+	Project 2-->
+
+<html lang="en">
+<head>
+	
+		<meta charset="utf-8">
+		<meta name="description" content="A web app that helps busy teachers keep track of their weekly tasks" />
+		<title>Weekly Teacher Tasks</title>
 		
-		<!--Conversely if you don't want to allow seatch engines access or follow links-->
-		<meta name="robots" content="noindex, no follow"/>
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/style.css"/>	
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+		<div data-role="page" id="home" data-theme="e">
+			<div data-role="header" data-position="fixed" data-theme="a">
+				<h1>Weekly Teacher Tasks</h1>
+		</div>
+		<!--Feature/CTA-->
+		<div>
+			<a href="additem.html" data-ajax="false" id="taskForm"><img src="images/ID-10092376.jpg"></a>
+		</div>
+		<!--Search-->	
+        <div data-role="content">
+				<ul data-role="listview" data-inset="true" data-filter="true">
 		
-		<!--Allows our content to size correctly to an iPhone display-->
-		<meta name="viewport" content= "user-scalable=no, width=device-width"/>
+				<li data-role="list-divider">Browse Categories</li>
+				<li><a href="#grade" data-theme="e">
+						<h3>Grade Papers</h3>
+						<p>Check for student understanding.</p>
+				</a></li>
+				<li><a href="#contact" data-theme="e">
+						<h3>Contact Parents</h3>
+						<p>Discuss upcoming events, questions and student progress.</p>
+				</a></li>
+				<li><a href="#meetings" data-theme="e">
+						<h3>Attend Meetings</h3>
+						<p>Keep track of all the meetings you need to attend.</p>
+					</a></li>
+				<li><a href="#write" data-theme="e">
+						<h3>Write Lesson Plans</h3>
+						<p>Write your lesson plans or jot down ideas for lessons.</p>
+				</a></li>
+					<li data-role="list-divider">Let's get creative</li>
+				<li><a href="#test" data-theme="e">
+						<h3>Create a Test</h3>
+						<p>Create assessments or worksheets.</p>
+					</a></li>
+				<li><a href="#project" data-theme="e">
+						<h3>Create a Project</h3>
+						<p>Implement project ideas for students.</p>
+				</a></li>
+				
+				</ul>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#bronze" data-icon="star">Bronze App</a></li>
+						<li><a href="#ghpages" data-icon="check">gh-Pages</a></li>
+						<li><a href="#addatask" data-icon="plus">Add a Task</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
 		
 		
-		<!--Document Title-->
-		<title> My first HTML5 Document </title>
-		
-		<!--Import our CSS styles-->
-		<link href="css/styles.css" rel="stylesheet" type="text/css" />
-		
-		 <!--Call Javascript file-->
-		 <!--<script src=js/main.js" type=text/javascript"></script>-->
-	</head>
-	<!--Document Body-->
-	<body>
-	<!--Heading Group-->
-		<header>
-			<hgroup>
-    			<h1>Weekly Teacher Tasks</h1>
-    			<h2> An app that saves all your weekly tasks into a convenient planner</h2>
-    			<h3>Get Started Now!</h3>
-    		</hgroup>
-  		</header> 
-    <!--Paragraph Tag-->
-    <p><a href="additem.html"> Add a Task</a></p>
-    
-    
-    </body>
-</html>	
-		
+		<div data-role="page" id="grade" data-add-back-btn="true" data-theme="e">
+			<div data-role="header" data-position="fixed">
+				<h1>Grade Papers</h1>
+			</div>
+			<div data-role="content">
+				<ul data-role="listview">
+					<li>
+							<img src="images/grading_papers.jpeg"/>
+							<h3>Grade Papers</h3>
+							<p>Time to check how much the students learned!</p>
+					</li>
+					<li>Contact Parents</li>
+					<li>Attend Meetings</li>
+					<li>Write Lesson Plans</li>
+					<li>Create a Test</li>
+					<li>Create a Project</li>
+				</ul>
+			</div>
+			<div data-role="footer" data-position="fixed">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#home" data-icon="home">Home</a></li>
+						<li><a href="#bronze" data-icon="star">Bronze App</a></li>
+						<li><a href="#ghpages" data-icon="check">gh-Pages</a></li>
+						<li><a href="#addatask" data-icon="plus">Add a Task</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js>"</script>
+</body>
+</html>

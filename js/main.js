@@ -2,7 +2,7 @@
 //Marylia Nieves
 //MiU 
 //Assignment 1
-// 10/25/12 
+// 1211 
 //var chameleon = "blue";
 //alert (chameleon);
 
